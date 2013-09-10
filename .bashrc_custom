@@ -8,3 +8,5 @@
 #fi
 
 #ssh-add ~/.ssh/id_rsa_g
+
+chmod u+x ~/.emacs.d/node_emacs
