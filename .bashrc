@@ -164,8 +164,8 @@ shopt -s histappend
 # See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
 PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 
-if [ -d .tools/ ]; then
-    PATH=$PATH:~/tools
+if [ -d ~/dotfiles/.tools/ ]; then
+    PATH=$PATH:~/dotfiles/.tools/
     export PATH
 fi
 
