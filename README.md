@@ -14,10 +14,7 @@ mv .emacs.d .emacs.d~
 ln -s dotfiles/.emacs.d .
 ```
 
-See also http://github.com/startup-class/setup to install prerequisite
-programs.
-
-See the [Startup Engineering Video Lectures 4a/4b](https://class.coursera.org/startup-001/lecture/index)
-for more details.
-
 ---Modified for my own use---
+
+rlwrap source: http://utopia.knoware.nl/~hlub/uck/rlwrap/
+Using GPL License
