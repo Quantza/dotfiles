@@ -5,13 +5,17 @@ configure your `bash` and `emacs` development environment as follows:
 
 ```sh
 cd $HOME
-git clone https://github.com/startup-class/dotfiles.git
+git clone git@github.com:Quantza/dotfiles.git
 ln -sb dotfiles/.screenrc .
+ln -sb dotfiles/.tmux.conf .
+ln -sb dotfiles/.gitmessage.txt .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
-mv .emacs.d .emacs.d~
-ln -s dotfiles/.emacs.d .
+ln -sf dotfiles/.emacs.d .
+ln -sf dotfiles/.tmux .
+ln -sf dotfiles/.tools .
+ln -sf dotfiles/.vagrant.d .
 ```
 
 ---Modified for my own use---
