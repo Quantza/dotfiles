@@ -12,10 +12,13 @@ ln -sb dotfiles/.gitmessage.txt .
 ln -sb dotfiles/.bash_profile .
 ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
+ln -sb dotfiles/.tools.sh .
 ln -sf dotfiles/.emacs.d .
 ln -sf dotfiles/.tmux .
 ln -sf dotfiles/.tools .
 ln -sf dotfiles/.vagrant.d .
+
+chmod -R 0700 ~/dotfiles/.tools/
 ```
 
 ---Modified for my own use---
