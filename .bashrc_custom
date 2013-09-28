@@ -26,4 +26,3 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 chmod -R 0700 ~/dotfiles/.tools/
-
