@@ -144,7 +144,7 @@ do
 		   echo "Please enter a key path:";
                    read keypath && ssh-add $keypath;;
 		k) sshConnect "vm-0.clumsyassassin.koding.kd.io";;
-		n) sshConnect "action@euw1.actionbox.io -p 12888";;
+		n) sshConnect "action@euw1.actionbox.io -p 14954";;
 		a) 
 		   echo "Please enter an ip address or hostname:";
 		   read host && ssh -i $HOME/.ssh/ubuntu-dev.pem $host;;
