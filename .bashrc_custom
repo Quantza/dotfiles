@@ -31,7 +31,7 @@ chmod -R 0700 $HOME/dotfiles/.tools/
 if [ -f $HOME/start-agent-trigger ]; then 
 	eval `ssh-agent -s` 
 	ssh-add $HOME/.ssh/id_rsa_g
-	ssh-add $HOME/.ssh/private1.key
-	ssh-add $HOME/.ssh/private2.key
+	ssh-add $HOME/.ssh/web-dev
+	ssh-add $HOME/.ssh/ko-dev
 fi
 
