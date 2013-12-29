@@ -135,9 +135,9 @@ do
 		1)  
                    addKey "id_rsa_g";;
 		2) 
-		   addKey "private2.key";;
+		   addKey "ko-dev";;
 		3) 
-		   addKey "private1.key";;
+		   addKey "web-dev";;
 		4) 
 		   addKey "ubuntu-dev.pem";;
 	        5)
