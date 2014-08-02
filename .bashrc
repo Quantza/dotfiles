@@ -1,5 +1,6 @@
 # .bashrc file
 # By Balaji S. Srinivasan (balajis@stanford.edu)
+# Edited By Quantza (post2base@hotmail.co.uk)
 #
 # Concepts:
 #
@@ -164,8 +165,8 @@ shopt -s histappend
 # See:  http://www.ukuug.org/events/linux2003/papers/bash_tips/
 PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 
-if [ -d ~/dotfiles/.tools/ ]; then
-    PATH=$PATH:~/dotfiles/.tools/
+if [ -d $HOME/dotfiles/.tools/ ]; then
+    PATH=$HOME/dotfiles/.tools/:$PATH
     export PATH
 fi
 
@@ -211,7 +212,7 @@ export LC_ALL=POSIX
 
 # 2.6) Install rlwrap if not present
 # http://stackoverflow.com/a/677212
-#command -v rlwrap >/dev/null 2>&1 || { echo >&2 "Install rlwrap to use node: sudo apt-get install -y rlwrap";}
+command -v rlwrap >/dev/null 2>&1 || { echo >&2 "Install rlwrap to use node: sudo apt-get install -y rlwrap";}
 #Check $HOME/tools folder.
 
 # 2.7) node.js and nvm
@@ -222,7 +223,7 @@ export NODE_DISABLE_COLORS=1
 if [ -s ~/.nvm/nvm.sh ]; then
     NVM_DIR=~/.nvm
     source ~/.nvm/nvm.sh
-    nvm use v0.10.12 &> /dev/null # silence nvm use; needed for rsync
+    nvm use v0.10 &> /dev/null # silence nvm use; needed for rsync
 fi
 
 ## ------------------------------
