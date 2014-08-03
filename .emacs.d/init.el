@@ -147,4 +147,4 @@
 ;; Local Variables:
 ;; coding: utf-8
 ;; no-byte-compile: t
-;; End:
+;;; init.el ends here
