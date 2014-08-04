@@ -25,3 +25,8 @@ if [ -f $HOME/start-agent-trigger ]; then
 	ssh-add $HOME/.ssh/ko-dev
 fi
 
+export WINEARCH=win32
+#export WINEARCH=win64
+export WINEPREFIX=/home/luther-pc/.wine
+export JAVAHOME=/opt/jdk/bin
+export JAVA_HOME=/opt/jdk/bin
