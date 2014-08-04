@@ -30,3 +30,4 @@ export WINEARCH=win32
 export WINEPREFIX=/home/luther-pc/.wine
 export JAVAHOME=/opt/jdk/bin
 export JAVA_HOME=/opt/jdk/bin
+export SMARTGITHG_JAVA_HOME=/opt/jdk/bin
