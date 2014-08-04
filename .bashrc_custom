@@ -32,3 +32,4 @@ export JAVAHOME=/opt/jdk/bin
 export JAVA_HOME=/opt/jdk/bin
 export SMARTGITHG_JAVA_HOME=/opt/jdk/bin
 export TEXMFHOME=$HOME/texmf
+export EDITOR='emacs -nw'
