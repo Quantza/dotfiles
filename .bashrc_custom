@@ -18,18 +18,26 @@ alias egrep='egrep --color=auto'
 
 chmod -R 0700 $HOME/dotfiles/.tools/
 
+#If cygwin
 if [ -f $HOME/start-agent-trigger ]; then 
-	eval `ssh-agent -s` 
-	ssh-add $HOME/.ssh/id_rsa_g
-	ssh-add $HOME/.ssh/web-dev
-	ssh-add $HOME/.ssh/ko-dev
+    eval `ssh-agent -s` 
+    ssh-add $HOME/.ssh/id_rsa_g
+    ssh-add $HOME/.ssh/web-dev
+    ssh-add $HOME/.ssh/ko-dev
+#Actual Linux distro
+else
+    export WINEARCH=win32
+    #export WINEARCH=win64
+    export WINEPREFIX=$HOME/.wine
+    export JAVAHOME=/opt/jdk/bin
+    export JAVA_HOME=/opt/jdk/bin
+    export SMARTGITHG_JAVA_HOME=/opt/jdk/bin
+    export TEXMFHOME=$HOME/texmf
+    export EDITOR='emacs -nw'
+
+    #Start 'conky' if startup script exists.
+    if [ -f $HOME/.conky/conky-startup.sh ]; then
+        $HOME/.conky/conky-startup.sh
+    fi
 fi
 
-export WINEARCH=win32
-#export WINEARCH=win64
-export WINEPREFIX=$HOME/.wine
-export JAVAHOME=/opt/jdk/bin
-export JAVA_HOME=/opt/jdk/bin
-export SMARTGITHG_JAVA_HOME=/opt/jdk/bin
-export TEXMFHOME=$HOME/texmf
-export EDITOR='emacs -nw'
