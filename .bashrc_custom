@@ -37,6 +37,7 @@ else
 
     #Start 'conky' if startup script exists.
     if [ -f $HOME/.conky/conky-startup.sh ]; then
+        chmod +x $HOME/.conky/conky-startup.sh
         $HOME/.conky/conky-startup.sh
     fi
 fi
