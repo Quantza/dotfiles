@@ -16,13 +16,14 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+#Make prebuilt tools executable
 chmod -R 0700 $HOME/dotfiles/.tools/
 
 #If cygwin
 if [ -f $HOME/start-agent-trigger ]; then 
-    eval `ssh-agent -s` 
-    ssh-add $HOME/.ssh/id_rsa_g
+    eval "$(ssh-agent -s)"
     ssh-add $HOME/.ssh/web-dev
+    ssh-add $HOME/.ssh/gHub_rsa
     ssh-add $HOME/.ssh/ko-dev
 #Actual Linux distro
 else
