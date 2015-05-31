@@ -1,8 +1,10 @@
 ;; Basic clojure support, even in Emacs 23
 ;; See also init-clojure-cider.el
 
+(unless (package-installed-p 'clojure-mode)
+  (package-install 'clojure-mode))
+
 (require-package 'clojure-mode)
-(require-package 'clojure-test-mode)
 (require-package 'cljsbuild-mode)
 (require-package 'elein)
 
