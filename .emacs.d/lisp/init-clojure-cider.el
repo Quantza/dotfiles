@@ -1,7 +1,7 @@
 (require 'init-clojure)
 (require-package 'emacs '(24))
 
-((require-package 'cider)
+(require-package 'cider)
 (require-package 'ac-cider)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
