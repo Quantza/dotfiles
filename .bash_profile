@@ -54,6 +54,10 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
+if [ -f ~/.profile ]; then
+   source ~/.profile
+fi
+
 # Configure PATH
 #  - These are line by line so that you can kill one without affecting the others.
 #  - Lowest priority first, highest priority last.
