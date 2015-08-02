@@ -43,6 +43,12 @@ else
     fi
 fi
 
+#http://virtualenvwrapper.readthedocs.org/en/latest/install.html#lazy-loading
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Projects
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
+
 if [ -f $HOME/.gvm/scripts/gvm ]; then
 	source $HOME/.gvm/scripts/gvm
 fi
