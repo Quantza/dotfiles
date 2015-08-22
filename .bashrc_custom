@@ -41,16 +41,19 @@ else
         chmod +x $HOME/.conky/conky-startup.sh
         $HOME/.conky/conky-startup.sh
     fi
+
+    # Haskell and Elixir
+    export PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH
+    export PATH="$PATH:$(which elixir)"
+
+    #http://virtualenvwrapper.readthedocs.org/en/latest/install.html#lazy-loading
+    export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/Projects
+    export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+    source /usr/local/bin/virtualenvwrapper_lazy.sh
+
+    if [ -f $HOME/.gvm/scripts/gvm ]; then
+        source $HOME/.gvm/scripts/gvm
+    fi
 fi
-
-#http://virtualenvwrapper.readthedocs.org/en/latest/install.html#lazy-loading
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Projects
-export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-source /usr/local/bin/virtualenvwrapper_lazy.sh
-
-if [ -f $HOME/.gvm/scripts/gvm ]; then
-	source $HOME/.gvm/scripts/gvm
-fi
-
 
