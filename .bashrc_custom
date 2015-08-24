@@ -50,11 +50,14 @@ else
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/Projects
     export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
-
-    if [ -f /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
-        source /usr/local/bin/virtualenvwrapper_lazy.sh
+    
+    VIRTUALENVWRAPPER_PREFIX="/usr/local/bin/virtualenvwrapper"
+    if [ -f "$VIRTUALENVWRAPPER_PREFIX"_lazy.sh ]; then
+        source "$VIRTUALENVWRAPPER_PREFIX"_lazy.sh
     else
-	source /usr/local/bin/virtualenvwrapper.sh
+	if [ -f "$VIRTUALENVWRAPPER_PREFIX".sh
+	    source "$VIRTUALENVWRAPPER_PREFIX".sh
+	fi
     fi
 
     if [ -f $HOME/.gvm/scripts/gvm ]; then
