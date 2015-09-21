@@ -78,6 +78,7 @@
 (require 'init-python-mode)
 (require 'init-haskell)
 (require 'init-ruby-mode)
+(require 'init-rust-mode)
 (require 'init-rails)
 (require 'init-sql)
 
