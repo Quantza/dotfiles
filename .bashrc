@@ -233,7 +233,3 @@ fi
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
 
-## Devkit vars
-DEVKITPRO=/home/quantza-lab/devkitPro
-DEVKITARM=${DEVKITPRO}/devkitARM
-
