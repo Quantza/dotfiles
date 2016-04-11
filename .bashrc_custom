@@ -35,11 +35,11 @@ else
     export SMARTGITHG_JAVA_HOME=/opt/jdk/bin
     export TEXMFHOME=$HOME/texmf
     export EDITOR='emacs -nw'
-
-	PATH_ADDITION=$HOME/bin:/usr/local/cuda-7.5/bin
+ 
+    PATH_ADDITION=$HOME/bin:/usr/local/cuda-7.5/bin
     export PATH=$PATH_ADDITION:$PATH
-
-	export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+    export CUDA_ROOT=/usr/local/cuda-7.5
+    export LD_LIBRARY_PATH=$CUDA_ROOT/lib64:$LD_LIBRARY_PATH
 
     ## Devkit vars
     DEVKITPRO=/home/quantza-lab/devkitPro
