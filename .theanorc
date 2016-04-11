@@ -1,0 +1,17 @@
+[global]
+device = gpu
+floatX = float32
+#device=cpu
+#floatX=float64
+openmp=False
+print_active_device=True
+enable_initial_driver_test=True
+
+[cuda]
+root=/usr/local/cuda-7.5
+
+[lib]
+cnmem = 1
+
+[blas]
+ldflags = 
