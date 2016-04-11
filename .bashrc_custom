@@ -16,10 +16,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-## Devkit vars
-DEVKITPRO=/home/quantza-lab/devkitPro
-DEVKITARM=${DEVKITPRO}/devkitARM
-
 #Make prebuilt tools executable
 chmod -R 0700 $HOME/dotfiles/.tools/
 
@@ -39,8 +35,16 @@ else
     export SMARTGITHG_JAVA_HOME=/opt/jdk/bin
     export TEXMFHOME=$HOME/texmf
     export EDITOR='emacs -nw'
-    export PATH=$HOME/bin:$PATH
 
+	PATH_ADDITION=$HOME/bin:/usr/local/cuda-7.5/bin
+    export PATH=$PATH_ADDITION:$PATH
+
+	export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+
+    ## Devkit vars
+    DEVKITPRO=/home/quantza-lab/devkitPro
+    DEVKITARM=${DEVKITPRO}/devkitARM
+	
     #Start 'conky' if startup script exists.
     if [ -f $HOME/.conky/conky-startup.sh ]; then
         chmod +x $HOME/.conky/conky-startup.sh
