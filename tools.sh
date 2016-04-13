@@ -6,7 +6,7 @@ COMMAND_END_TEXT="Done. Type in 'q' and press Enter to quit."
 EXIT_STATUS=-1
 
 function quitTools {
-    if [ "$EXIT_STATUS" = 'q' ]; then
+    if [ "$EXIT_STATUS" == 'q' ]; then
 	exit 0
     fi
 }
@@ -104,7 +104,7 @@ function gitClone {
 while :
 do
 	clear
-	if [ "$EXIT_STATUS" = "q" ]; then
+	if [ "$EXIT_STATUS" == "q" ]; then
 		exit 0
 	fi
 	echo "************************"
