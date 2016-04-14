@@ -11,20 +11,18 @@ function parse_git_branch {
 #http://stackoverflow.com/questions/228544/how-to-tell-if-a-string-is-not-defined-in-a-bash-shell-script
 
 function isVarDefined {
-	local isVarDefinedResult=0
-	if [ -z "${$1+xxx}" ]; then
-		$isVarDefinedResult=0;
+	if [ -z "${VAR+xxx}" ]; then
+		return 0;
 	else
-		$isVarDefinedResult=1;
+		return 1;
 	fi
 }
 
 function isVarEmpty {
-	local isVarEmpty=0
-	if [ -z "$1" ] && [ "${$1+xxx}" = "xxx" ]; then
-		$isVarEmpty=1;
+	if [ -z "${VAR-}" ] && [ "${VAR+xxx}" = "xxx" ]; then
+		return 1;
 	else
-		$isVarEmpty=0;
+		return 0;
 	fi
 }
 
@@ -62,15 +60,15 @@ else
     
     export LD_LIBRARY_PATH=$CUDA_ROOT/lib64:$LD_LIBRARY_PATH
 
-	if [ ! $(isVarDefined $MY_BIN_DIR) ]; then
+	if [ ! $(isVarDefined "$MY_BIN_DIR") ]; then
 		export MY_BIN_DIR="$HOME/bin";
 	fi
 
-	if [ ! $(isVarDefined $MY_DEV_DIR) ]; then
+	if [ ! $(isVarDefined "$MY_DEV_DIR") ]; then
 		export MY_DEV_DIR="$HOME/dev";
 	fi
 
-	if [ ! $(isVarDefined $MY_GIT_REPO_DIR) ]; then
+	if [ ! $(isVarDefined "$MY_GIT_REPO_DIR") ]; then
 		export MY_GIT_REPO_DIR="$HOME/GitRepos";
 	fi
 
