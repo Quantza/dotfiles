@@ -8,6 +8,26 @@ function parse_git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
+#http://stackoverflow.com/questions/228544/how-to-tell-if-a-string-is-not-defined-in-a-bash-shell-script
+
+function isVarDefined {
+	local isVarDefinedResult=0
+	if [ -z "${$1+xxx}" ]; then
+		$isVarDefinedResult=0;
+	else
+		$isVarDefinedResult=1;
+	fi
+}
+
+function isVarEmpty {
+	local isVarEmpty=0
+	if [ -z "$1" ] && [ "${$1+xxx}" = "xxx" ]; then
+		$isVarEmpty=1;
+	else
+		$isVarEmpty=0;
+	fi
+}
+
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$(parse_git_branch)\$ "
 export CLICOLOR=1
 
@@ -41,6 +61,18 @@ else
     export PATH=$PATH_ADDITION:$PATH
     
     export LD_LIBRARY_PATH=$CUDA_ROOT/lib64:$LD_LIBRARY_PATH
+
+	if [ ! $(isVarDefined $MY_BIN_DIR) ]; then
+		export MY_BIN_DIR="$HOME/bin";
+	fi
+
+	if [ ! $(isVarDefined $MY_DEV_DIR) ]; then
+		export MY_DEV_DIR="$HOME/dev";
+	fi
+
+	if [ ! $(isVarDefined $MY_GIT_REPO_DIR) ]; then
+		export MY_GIT_REPO_DIR="$HOME/GitRepos";
+	fi
 
     ## Devkit vars
     DEVKITPRO=/home/quantza-lab/devkitPro
