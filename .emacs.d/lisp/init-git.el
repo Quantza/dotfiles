@@ -24,7 +24,6 @@
 (after-load 'magit
   (fullframe magit-status magit-mode-quit-window))
 
-
 ;;; When we start working on git-backed files, use git-wip if available
 
 (after-load 'magit
@@ -34,18 +33,15 @@
 (after-load 'magit
   (diminish 'magit-auto-revert-mode))
 
-
 (when *is-a-mac*
   (after-load 'magit
     (add-hook 'magit-mode-hook (lambda () (local-unset-key [(meta h)])))))
 
 
-
 ;; Convenient binding for vc-git-grep
 (global-set-key (kbd "C-x v f") 'vc-git-grep)
 
 
-
 ;;; git-svn support
 
 (require-package 'magit-svn)
@@ -76,18 +72,14 @@
     (compile (concat "git svn "
                      (ido-completing-read "git-svn command: " git-svn--available-commands nil t)))))
 
-
 (require-package 'git-messenger)
 (global-set-key (kbd "C-x v p") #'git-messenger:popup-message)
 
-
 ;;; github
 
 (require-package 'yagist)
 (require-package 'github-browse-file)
 (require-package 'bug-reference-github)
 (add-hook 'prog-mode-hook 'bug-reference-prog-mode)
-
-
 
 (provide 'init-git)

@@ -58,6 +58,7 @@ else
     export SMARTGITHG_JAVA_HOME=/opt/jdk/bin
     export TEXMFHOME=$HOME/texmf
     export EDITOR='emacs -nw'
+	export TERM=xterm-256color
    
     export CUDA_ROOT=/usr/local/cuda
     PATH_ADDITION=$HOME/bin:$CUDA_ROOT
