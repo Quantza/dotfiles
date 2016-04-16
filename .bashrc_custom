@@ -78,6 +78,9 @@ else
 		export MY_GIT_REPO_DIR="$HOME/GitRepos";
 	fi
 
+	chmod a+x "$BIN_DIR/det_conf_linux_dist"
+	source "$BIN_DIR/det_conf_linux_dist"
+
     ## Devkit vars
     DEVKITPRO=/home/quantza-lab/devkitPro
     DEVKITARM=${DEVKITPRO}/devkitARM
