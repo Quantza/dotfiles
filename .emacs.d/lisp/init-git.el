@@ -1,7 +1,8 @@
 (require-package-no-suffix 'magit)
 (require-package 'git-blame)
-(require-package 'git-commit-mode)
-(require-package 'git-rebase-mode)
+
+;;https://github.com/magit/git-modes
+(require-package 'gitattributes-mode)
 (require-package 'gitignore-mode)
 (require-package 'gitconfig-mode)
 (require-package 'git-messenger) ;; Though see also vc-annotate's "n" & "p" bindings
