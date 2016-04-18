@@ -91,19 +91,26 @@ else
         $HOME/.conky/conky-startup.sh
     fi
 
-    #http://virtualenvwrapper.readthedocs.org/en/latest/install.html#lazy-loading
+	#http://virtualenvwrapper.readthedocs.org/en/latest/install.html#lazy-loading
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/Projects
-    export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 
-    VIRTUALENVWRAPPER_PREFIX="/usr/local/bin/virtualenvwrapper"
-    if [ -f "$VIRTUALENVWRAPPER_PREFIX"_lazy.sh ]; then
-        source "$VIRTUALENVWRAPPER_PREFIX"_lazy.sh
-    else
-	if [ -f "$VIRTUALENVWRAPPER_PREFIX".sh ]; then
-	    source "$VIRTUALENVWRAPPER_PREFIX".sh
+	if [ "$DISTRO_ID" == "ubuntu" ]; then
+		VIRTUALENVWRAPPER_PREFIX="/usr/local/bin/virtualenvwrapper"
+		
+	elif [ "$DISTRO_ID" == "arch" ]; then
+		VIRTUALENVWRAPPER_PREFIX="/usr/bin/virtualenvwrapper"
 	fi
-    fi
+
+	if [ $(isVarDefined "$VIRTUALENVWRAPPER_PREFIX") ]; then
+		if [ -f "$VIRTUALENVWRAPPER_PREFIX"_lazy.sh  ]; then
+			export VIRTUALENVWRAPPER_SCRIPT="$VIRTUALENVWRAPPER_PREFIX""_lazy.sh"
+			source "$VIRTUALENVWRAPPER_SCRIPT"
+		elif [ -f "$VIRTUALENVWRAPPER_PREFIX".sh ]; then
+			export VIRTUALENVWRAPPER_SCRIPT="$VIRTUALENVWRAPPER_PREFIX"".sh"
+			source "$VIRTUALENVWRAPPER_SCRIPT"
+		fi
+	fi		
 
     if [ -f $HOME/.gvm/scripts/gvm ]; then
         source $HOME/.gvm/scripts/gvm
