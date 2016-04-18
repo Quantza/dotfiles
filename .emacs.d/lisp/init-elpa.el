@@ -12,24 +12,26 @@
 
 ;;; Standard package repositories
 
-;(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; Marmalade
+;;(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
+
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 
+;; org-repo
 ;; We include the org repository for completeness, but don't normally
 ;; use it.
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
-(when (< emacs-major-version 24)
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-
 ;;; Also use Melpa for most packages
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/") t)
-(add-to-list 'package-archives
-	     '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+	     '("melpa" . "https://melpa.org/packages/"))
+;;(add-to-list 'package-archives
+;;	     '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
-
 ;; If gpg cannot be found, signature checking will fail, so we
 ;; conditionally enable it according to whether gpg is available. We
 ;; re-run this check once $PATH has been configured
@@ -40,8 +42,9 @@
 (after-load 'init-exec-path
   (sanityinc/package-maybe-enable-signatures))
 
+(when (not package-archive-contents)
+    (package-refresh-contents))
 
-
 ;;; On-demand installation of packages
 
 (defun require-package (package &optional min-version no-refresh)
@@ -56,16 +59,24 @@ re-downloaded in order to locate PACKAGE."
         (package-refresh-contents)
         (require-package package min-version t)))))
 
+(defun require-package-no-suffix (package &optional no-refresh)
+  "Install given PACKAGE, If NO-REFRESH is non-nil, the available package lists will not be
+re-downloaded in order to locate PACKAGE."
+  (if (package-installed-p package)
+      t
+    (if (or (member package package-archive-contents) no-refresh)
+        (package-install package)
+      (progn
+        (package-refresh-contents)
+        (require-package-no-suffix package t)))))
 
-
 ;;; Fire up package.el
-
+;; https://www.emacswiki.org/emacs/ELPA
+;; basic initialization, (require) non-ELPA packages, etc.
+;;(setq package-enable-at-startup nil)
 (package-initialize)
 
-
-
 (require-package 'fullframe)
 (fullframe list-packages quit-window)
-
 
 (provide 'init-elpa)
