@@ -1,0 +1,35 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/quantza-lab/dotfiles/" . ".emacs.d/")
+ ("/home/" . "quantza-lab/")
+ ("/home/quantza-lab/" . "dotfiles/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/quantza-lab/dotfiles/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "custom.el"
+ "init.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/quantza-lab/dotfiles/.emacs.d/" (22294 10405 874138 927000) ".emacs.desktop.lock" "elpa/" ".agignore" "custom.el" ".emacs.desktop" "README.md" "network-security.data" "auto-save-list/" "init-preload-local.el" "frame-restore-parameters" "lisp/" "../" ".gitignore" "./" "site-lisp/" "history" "init.el" "ac-comphist.dat" ".session")
+
+ ("/home/quantza-lab/dotfiles/" (22294 9881 834148 311000) ".screenrc" ".tools/" ".tmux/" ".tmux.conf" ".vagrant.d/" "site.cfg" ".gitmessage.txt" "tools.sh" "README.md" ".bashrc_custom" ".git/" "determine_and_configure_linux_distro.sh" ".theanorc" "../" ".ssh/" "./" ".emacs.d/" ".bash_profile" "matplotlibrc" ".bashrc")
+
+ ("/home/" (22283 44927 838260 431000) ".ecryptfs/" "quantza-lab/" "lost+found/" "../" "./")
+
+ ("/home/quantza-lab/GitRepos/" (22287 38226 629198 928000) "go-ethereum/" "emacs/" "onedrive-d/" "aui/" "Theano/" "setup/" "gpu-voronoi/" "OpenBLAS/" "mist/" "cpp-ethereum/" "orig_aui/" "../" "./" "keras/" "saliency-nn/")
+
+ ("/home/quantza-lab/" (22294 9638 770152 664000) ".gksu.lock" ".gnome2_private/" ".ethereum/" ".screenrc" ".tools/" ".pwsafe/" "Pictures/" "dotfiles/" ".onedrived/" ".idlerc/" ".gconf/" ".themes/" ".tmux/" ".tmux.conf" "courseraDL/" "Data/" ".gnupg/" ".xsession-errors" ".zlogin" ".nvidia-settings-rc" ".nv/" ".vagrant.d/" ".bashrc~" ".bash_profile~" ".macromedia/" "site.cfg" ".zshrc" ".gitmessage.txt" ".neoman/" "Downloads/" "GitRepos/" ".bash_eternal_history" ".selected_editor" "Videos/" ".java/" ".cinnamon/" ".xinputrc" "Music/" ".dmrc" ".nvm/" ".npm/" ".bash_logout" "Public/" ".gvm/" ".virtualenvs/" ".bash_history" "PS" ".Private/" ".lein/" "bin/" ".mozilla/" ".hplip/" ".kde/" "PSBak/" ".bashrc_custom" ".ecryptfs/" ".ssh.old/" ".config/" "Documents/" ".local/" "number_exp_data.zip" "Sync/" "Templates/" ".gnome2/" ".theanorc" "Desktop/" "edxDL/" ".dbus/" "go/" "logs/" ".recentf" "node_modules/" ".adobe/" ".ssh/" ".face" ".Xauthority" "dev/" ".icons/" ".rvm/" ".keras/" "Projects/" ".linuxmint/" ".gitconfig" ".pip/" ".wine/" ".emacs.d/" ".pki/" ".mkshrc" "NVIDIA_CUDA-7.5_Samples/" ".profile" "mounts/" ".thunderbird/" ".bash_profile" "ArchLinuxARM-rpi-2-latest.tar.gz" "Themes/" ".cache/" ".bashrc" ".ICEauthority" ".theano/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
