@@ -69,20 +69,20 @@ else
 
     export MATPLOTLIBRC="$HOME""/.config/matplotlib"
     
-	if [ ! $(isVarDefined "$MY_BIN_DIR") ]; then
-		export MY_BIN_DIR="$HOME/bin";
-	fi
+    if [ ! $(isVarDefined "$MY_BIN_DIR") ]; then
+            export MY_BIN_DIR="$HOME/bin";
+    fi
 
-	if [ ! $(isVarDefined "$MY_DEV_DIR") ]; then
-		export MY_DEV_DIR="$HOME/dev";
-	fi
+    if [ ! $(isVarDefined "$MY_DEV_DIR") ]; then
+            export MY_DEV_DIR="$HOME/dev";
+    fi
 
-	if [ ! $(isVarDefined "$MY_GIT_REPO_DIR") ]; then
-		export MY_GIT_REPO_DIR="$HOME/GitRepos";
-	fi
+    if [ ! $(isVarDefined "$MY_GIT_REPO_DIR") ]; then
+            export MY_GIT_REPO_DIR="$HOME/GitRepos";
+    fi
 
-	chmod a+x "$MY_BIN_DIR/det_conf_linux_dist"
-	source "$MY_BIN_DIR/det_conf_linux_dist"
+    chmod a+x "$MY_BIN_DIR/det_conf_linux_dist"
+    source "$MY_BIN_DIR/det_conf_linux_dist"
 
     ## Devkit vars
     DEVKITPRO=/home/quantza-lab/devkitPro
