@@ -102,7 +102,9 @@ else
 		VIRTUALENVWRAPPER_PREFIX="/usr/local/bin/virtualenvwrapper"
 		
 	elif [ "$DISTRO_ID" == "arch" ]; then
-		VIRTUALENVWRAPPER_PREFIX="/usr/bin/virtualenvwrapper"
+	    VIRTUALENVWRAPPER_PREFIX="/usr/bin/virtualenvwrapper"
+            # Start ssh-agent
+            eval "$(ssh-agent -s)"
 	fi
 
 	if [ $(isVarDefined "$VIRTUALENVWRAPPER_PREFIX") ]; then
