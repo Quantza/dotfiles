@@ -104,8 +104,14 @@ else
 	elif [ "$DISTRO_ID" == "arch" ]; then
 	    VIRTUALENVWRAPPER_PREFIX="/usr/bin/virtualenvwrapper"
             # Start ssh-agent
-            eval "$(ssh-agent -s > /dev/null 1>&1)"
-	fi
+            if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+                eval `ssh-agent`
+                ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+            fi
+
+            export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+            ssh-add -l | grep "The agent has no identities" && ssh-add
+        fi
 
 	if [ $(isVarDefined "$VIRTUALENVWRAPPER_PREFIX") ]; then
 		if [ -f "$VIRTUALENVWRAPPER_PREFIX"_lazy.sh  ]; then
