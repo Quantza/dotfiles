@@ -104,6 +104,7 @@ else
 	elif [ "$DISTRO_ID" == "arch" ]; then
 	    VIRTUALENVWRAPPER_PREFIX="/usr/bin/virtualenvwrapper"
             # Start ssh-agent
+            # Source: http://unix.stackexchange.com/questions/90853/how-can-i-run-ssh-add-automatically-without-password-prompt
             if [ ! -S ~/.ssh/ssh_auth_sock ]; then
                 eval `ssh-agent`
                 ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
