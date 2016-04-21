@@ -42,12 +42,47 @@ alias egrep='egrep --color=auto'
 #Make prebuilt tools executable
 chmod -R 0700 $HOME/dotfiles/.tools/
 
+export MATPLOTLIBRC="$HOME""/.config/matplotlib"
+    
+if [ ! $(isVarDefined "$MY_BIN_DIR") ]; then
+        export MY_BIN_DIR="$HOME/bin";
+fi
+
+if [ ! $(isVarDefined "$MY_DEV_DIR") ]; then
+        export MY_DEV_DIR="$HOME/dev";
+fi
+
+if [ ! $(isVarDefined "$MY_GIT_REPO_DIR") ]; then
+        export MY_GIT_REPO_DIR="$HOME/GitRepos";
+fi
+
+chmod a+x "$MY_BIN_DIR/det_conf_linux_dist"
+source "$MY_BIN_DIR/det_conf_linux_dist"
+
 #If cygwin
-if [ -f $HOME/start-agent-trigger ]; then 
-    eval "$(ssh-agent -s)"
-    ssh-add $HOME/.ssh/web-dev
-    ssh-add $HOME/.ssh/gHub_rsa
-    ssh-add $HOME/.ssh/ko-dev
+if [ $(isVarDefined "$DISTRO_ID") ]  && [ "$DISTRO_ID" == "cygwin" ] || [ -f $HOME/cygwin-trigger ] ; then 
+    # Start ssh-agent
+    # Source: http://unix.stackexchange.com/questions/90853/how-can-i-run-ssh-add-automatically-without-password-prompt
+    if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+        eval `ssh-agent`
+        ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+    fi
+
+    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+    ssh-add -l | grep "The agent has no identities" && ssh-add
+
+    #eval "$(ssh-agent -s)"
+    #ssh-add $HOME/.ssh/gHub_rsa
+
+    alias qhome='/cygdrive/c/Users/Quantza'
+    alias bhome='/cygdrive/c/Users/TheBoss'
+    alias apt-cyg-main='apt-cyg -m http://mirrors.kernel.org/sourceware/cygwin'
+    alias apt-cyg-port='apt-cyg -m ftp://ftp.cygwinports.org/pub/cygwinports'
+
+    export PKG_INSTALL_PREFIX="apt-cyg install"
+    export DISTRO_ID="cygwin"
+    export EDITOR='emacs -nw'
+
 #Actual Linux distro
 else
     export WINEARCH=win32
@@ -57,7 +92,6 @@ else
     export JAVA_HOME=/opt/jdk/bin
     export SMARTGITHG_JAVA_HOME=/opt/jdk/bin
     export TEXMFHOME=$HOME/texmf
-    #export EDITOR='emacs -nw'
     export EDITOR="$HOME""/bin/edit"
     export TERM=xterm-256color
     
@@ -66,23 +100,6 @@ else
     export PATH=$PATH_ADDITION:$PATH
     
     export LD_LIBRARY_PATH=$CUDA_ROOT/lib64:$LD_LIBRARY_PATH
-
-    export MATPLOTLIBRC="$HOME""/.config/matplotlib"
-    
-    if [ ! $(isVarDefined "$MY_BIN_DIR") ]; then
-            export MY_BIN_DIR="$HOME/bin";
-    fi
-
-    if [ ! $(isVarDefined "$MY_DEV_DIR") ]; then
-            export MY_DEV_DIR="$HOME/dev";
-    fi
-
-    if [ ! $(isVarDefined "$MY_GIT_REPO_DIR") ]; then
-            export MY_GIT_REPO_DIR="$HOME/GitRepos";
-    fi
-
-    chmod a+x "$MY_BIN_DIR/det_conf_linux_dist"
-    source "$MY_BIN_DIR/det_conf_linux_dist"
 
     ## Devkit vars
     DEVKITPRO=/home/quantza-lab/devkitPro
@@ -103,16 +120,16 @@ else
 		
 	elif [ "$DISTRO_ID" == "arch" ]; then
 	    VIRTUALENVWRAPPER_PREFIX="/usr/bin/virtualenvwrapper"
-            # Start ssh-agent
-            # Source: http://unix.stackexchange.com/questions/90853/how-can-i-run-ssh-add-automatically-without-password-prompt
-            if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-                eval `ssh-agent`
-                ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-            fi
-
-            export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-            ssh-add -l | grep "The agent has no identities" && ssh-add
+        # Start ssh-agent
+        # Source: http://unix.stackexchange.com/questions/90853/how-can-i-run-ssh-add-automatically-without-password-prompt
+        if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+            eval `ssh-agent`
+            ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
         fi
+
+        export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+        ssh-add -l | grep "The agent has no identities" && ssh-add
+    fi
 
 	if [ $(isVarDefined "$VIRTUALENVWRAPPER_PREFIX") ]; then
 		if [ -f "$VIRTUALENVWRAPPER_PREFIX"_lazy.sh  ]; then
