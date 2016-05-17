@@ -1,18 +1,19 @@
 [global]
-device = gpu
+device = gpu0
 floatX = float32
 #device=cpu
 #floatX=float64
-openmp=False
-print_active_device=True
-enable_initial_driver_test=True
 
 [cuda]
 root=/usr/local/cuda-7.5
 
-# out of memory error...
-#[lib]
-#cnmem = 1
+##openmp=False
+##print_active_device=True
+##enable_initial_driver_test=True
 
-#[blas]
-#ldflags = 
+# out of memory error...
+##[lib]
+##cnmem = 1
+
+[blas]
+ldflags = -lf77blas -latlas -lgfortran #put your flags here

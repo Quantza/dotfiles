@@ -100,7 +100,7 @@ else
     export TERM=xterm-256color
     
     export CUDA_ROOT=/usr/local/cuda
-    PATH_ADDITION=$HOME/bin:$CUDA_ROOT
+    PATH_ADDITION=$HOME/bin:"$CUDA_ROOT"/bin
     export PATH=$PATH_ADDITION:$PATH
     
     export LD_LIBRARY_PATH=$CUDA_ROOT/lib64:$LD_LIBRARY_PATH
