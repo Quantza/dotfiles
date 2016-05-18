@@ -1,8 +1,8 @@
 [global]
-device = gpu0
-floatX = float32
-#device=cpu
-#floatX=float64
+#device = gpu0
+#floatX = float32
+device=cpu
+floatX=float64
 
 [cuda]
 root=/usr/local/cuda-7.5
@@ -16,4 +16,4 @@ root=/usr/local/cuda-7.5
 ##cnmem = 1
 
 [blas]
-ldflags = -lf77blas -latlas -lgfortran #put your flags here
+ldflags = -lf77blas -latlas -lgfortran

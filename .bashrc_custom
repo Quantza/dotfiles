@@ -103,7 +103,9 @@ else
     PATH_ADDITION=$HOME/bin:"$CUDA_ROOT"/bin
     export PATH=$PATH_ADDITION:$PATH
     
-    export LD_LIBRARY_PATH=$CUDA_ROOT/lib64:$LD_LIBRARY_PATH
+
+    LD_LIB_ADDITION="$CUDA_ROOT"/lib64:/usr/lib/gcc/x86_64-linux-gnu/4.8
+    export LD_LIBRARY_PATH=$LD_LIB_ADDITION:$LD_LIBRARY_PATH
 
     ## Devkit vars
     DEVKITPRO=/home/quantza-lab/devkitPro
