@@ -1,0 +1,62 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/quantza-lab/GitRepos/setup/" . "bin_scripts/")
+ ("/" . "home/")
+ ("/home/quantza-lab/GitRepos/saliency-nn/Python/" . "utilities/")
+ ("/home/quantza-lab/GitRepos/saliency-nn/" . "Python/")
+ ("/home/quantza-lab/GitRepos/" . "setup/")
+ ("/home/quantza-lab/dotfiles/" . ".emacs.d/")
+ ("/home/" . "quantza-lab/")
+ ("/home/quantza-lab/" . "dotfiles/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/quantza-lab/GitRepos/setup/bin_scripts/"
+ "/home/quantza-lab/dotfiles/.emacs.d/"
+ "/home/quantza-lab/dotfiles/"
+ "/home/quantza-lab/GitRepos/setup/"
+ "/home/quantza-lab/GitRepos/saliency-nn/Python/utilities/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "update_pip_venv.sh"
+ "update_pip.sh"
+ "custom.el"
+ "init.el"
+ ".bashrc_custom"
+ "autoupdate_eth.sh"
+ "autobuild_eth.sh"
+ ".bashrc"
+ "setup_init.sh"
+ "setup-dotfiles.sh"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/quantza-lab/GitRepos/setup/bin_scripts/" (22320 24759 13761 891000) "start_eth_console.sh" "start_eth_mining_with_geth.sh" "../" "start_emacs_client.sh" "start_geth_mining.sh" "./" "autoinstall_cuda.sh" "start_coursera-dl.sh" "autobuild_eth.sh" "get-pip.py" "geth_keystore_backup.sh" "mk_genesis_block.py" "start_eth_mining.sh" "tools.sh" "autoupdate_eth.sh" "update_pip.sh" "update_pip.py" "start_ssh_agent.sh" "log_and_bin_backup.sh" "symlink_binaries.sh" "edit" "start_gpu_ethereum_mining.sh" "start_geth_console.sh" "start_geth.sh")
+
+ ("/home/quantza-lab/GitRepos/saliency-nn/Python/utilities/" (22319 45631 63761 83000) "test_matplotlib.py" "../" "BaseExtractor.py" "./" "Utils.py" "test_cuda.py" "ListProcessor.py" "__init__.py" "Experimenter.py" "DataGenerator.py" "ParallelExtractor.py" "relu_3lyr_net_50_adam_mse.hdf5")
+
+ ("/home/quantza-lab/GitRepos/setup/" (22319 45649 579760 752000) "determine_and_configure_linux_distro.sh" "../" "README.md" "Dockerfile" "./" "setup-dotfiles.sh" "setup-heroku.sh" "setup_init.sh" ".git/" "install.sh" "setup_helper.sh" "setup_version_managers.sh" "setup.sh" "bin_scripts/")
+
+ ("/home/quantza-lab/dotfiles/" (22300 3640 342815 407000) ".emacs.d/" "determine_and_configure_linux_distro.sh" ".tmux.conf" ".theanorc" "matplotlibrc" "../" "README.md" ".tmux/" ".tools/" "./" ".bash_profile" ".bashrc" ".vagrant.d/" ".ssh/" ".screenrc" ".git/" "tools.sh" "site.cfg" ".gitmessage.txt" ".bashrc_custom" "matplotlib/")
+
+ ("/home/quantza-lab/dotfiles/.emacs.d/" (22320 24562 929767 468000) ".session" "init.el" "network-security.data" "../" "lisp/" "elpa/" "README.md" "site-lisp/" ".agignore" "./" "history" "recentf" ".emacs.desktop" "ac-comphist.dat" "init-preload-local.el" ".emacs.desktop.lock" ".gitignore" "custom.el" "ido.last")
+
+ ("/home/quantza-lab/" (22295 56192 998841 554000) ".gksu.lock" ".gnome2_private/" ".ethereum/" ".screenrc" ".tools/" ".pwsafe/" "Pictures/" "dotfiles/" "dotfiles~/" ".onedrived/" ".idlerc/" ".gitmessage.txt~" ".gconf/" ".themes/" ".tmux/" ".tmux.conf" "courseraDL/" "Data/" ".gnupg/" ".xsession-errors" ".zlogin" ".nvidia-settings-rc" ".nv/" ".theanorc~" ".vagrant.d/" ".bashrc~" ".bash_profile~" ".macromedia/" "site.cfg" ".zshrc" ".gitmessage.txt" ".neoman/" "Downloads/" "GitRepos/" ".bash_eternal_history" ".selected_editor" ".screenrc~" "Videos/" ".java/" ".cinnamon/" ".xinputrc" "Music/" ".dmrc" ".nvm/" ".npm/" ".bash_logout" "Public/" ".gvm/" ".virtualenvs/" ".bash_history" "PS" "site.cfg~" ".Private/" ".lein/" "bin/" ".mozilla/" ".tmux.conf~" ".hplip/" ".kde/" "PSBak/" ".bashrc_custom" ".ecryptfs/" ".ssh.old/" ".config/" "Documents/" ".local/" "number_exp_data.zip" "Sync/" "Templates/" ".gnome2/" ".bashrc_custom~" ".theanorc" "Desktop/" "edxDL/" ".dbus/" "go/" "logs/" ".recentf" "node_modules/" ".adobe/" ".ssh/" ".face" ".Xauthority" "dev/" ".icons/" ".rvm/" ".keras/" "Projects/" ".linuxmint/" ".gitconfig" ".pip/" ".wine/" ".emacs.d/" ".pki/" ".mkshrc" "NVIDIA_CUDA-7.5_Samples/" "PDF/" ".profile" "mounts/" ".thunderbird/" ".bash_profile" "ArchLinuxARM-rpi-2-latest.tar.gz" "Themes/" ".cache/" ".bashrc" ".ICEauthority" ".theano/" "../" "./")
+
+ ("/home/quantza-lab/GitRepos/saliency-nn/Python/" (22286 27957 274291 574000) "theano_test2.py" "utilities/" "pycuda3_test.py" "regressors/" "pycuda_test.py" "../" "Main.py" "theano_test.py" "./")
+
+ ("/home/quantza-lab/GitRepos/saliency-nn/" (22293 39373 386985 533000) "Data/" "Python/" "Plan and Training Notes.txt" "Training And Test Results - relu_2lyr_4_10_10_4_adam_mse_manfreds_data.txt" "Old Results.txt" "README.md" "Training And Test Results - tanh_2lyr_4_10_10_4_adam_mse_gen_data.txt" ".git/" "../" "Training And Test Results - relu_2lyr_4_10_10_4_adam_mse_gen_data.txt" ".gitignore" "Training And Test Results - tanh_2lyr_4_10_10_4_adam_mse_manfreds_data.txt" "./" "Training And Test Results - relu_2lyr_4_10_10_4_adam_mse_gentrain_manfredstest_data.txt")
+
+ ("/home/" (22283 44927 838260 431000) ".ecryptfs/" "quantza-lab/" "lost+found/" "../" "./")
+
+ ("/home/quantza-lab/GitRepos/" (22287 38226 629198 928000) "go-ethereum/" "emacs/" "onedrive-d/" "aui/" "Theano/" "setup/" "gpu-voronoi/" "OpenBLAS/" "mist/" "cpp-ethereum/" "orig_aui/" "../" "./" "keras/" "saliency-nn/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
