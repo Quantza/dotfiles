@@ -238,3 +238,5 @@ source ~/.bashrc_custom
 [[ -s "/home/quantza-lab/.gvm/scripts/gvm" ]] && source "/home/quantza-lab/.gvm/scripts/gvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/lib/gcc/x86_64-linux-gnu/4.8::/opt/eth/lib
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/lib/gcc/x86_64-linux-gnu/4.8::/opt/eth/lib:/opt/eth/lib
