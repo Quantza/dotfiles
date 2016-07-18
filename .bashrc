@@ -234,7 +234,6 @@ fi
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
 
-
 [[ -s "/home/quantza-lab/.gvm/scripts/gvm" ]] && source "/home/quantza-lab/.gvm/scripts/gvm"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
