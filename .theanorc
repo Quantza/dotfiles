@@ -1,11 +1,15 @@
 [global]
 device = gpu0
 floatX = float32
+init_gpu_device=gpu0
 #device=cpu
 #floatX=float64
 
 [cuda]
 root=/usr/local/cuda-7.5
+
+[nvcc]
+flags=-D_FORCE_INLINES
 
 ##openmp=False
 ##print_active_device=True

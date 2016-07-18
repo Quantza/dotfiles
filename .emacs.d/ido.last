@@ -37,6 +37,8 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/quantza-lab/GitRepos/emacs/" (22410 16215 293482 106000) "doc/" "lib-src/" "../" "lisp/" "msdos/" "leim/" "INSTALL.REPO" "lwlib/" "Makefile.in" "Makefile" "lib/" "ChangeLog.1" "./" "autogen.sh" "config.bat" "configure" "CONTRIBUTE" "build-aux/" "etc/" "src/" "make-dist" "configure.ac" ".dir-locals.el" "INSTALL" ".git/" ".gitattributes" "emacs/" "nextstep/" "test/" "config.log" "README" "autom4te.cache/" "oldXMenu/" "COPYING" "modules/" "aclocal.m4" "emacs~/" "config.status" ".gitignore" "BUGS" "info/" "nt/" "m4/" "ChangeLog.2" "GNUmakefile" "admin/")
+
  ("/home/quantza-lab/GitRepos/setup/bin_scripts/" (22320 24759 13761 891000) "start_eth_console.sh" "start_eth_mining_with_geth.sh" "../" "start_emacs_client.sh" "start_geth_mining.sh" "./" "autoinstall_cuda.sh" "start_coursera-dl.sh" "autobuild_eth.sh" "get-pip.py" "geth_keystore_backup.sh" "mk_genesis_block.py" "start_eth_mining.sh" "tools.sh" "autoupdate_eth.sh" "update_pip.sh" "update_pip.py" "start_ssh_agent.sh" "log_and_bin_backup.sh" "symlink_binaries.sh" "edit" "start_gpu_ethereum_mining.sh" "start_geth_console.sh" "start_geth.sh")
 
  ("/home/quantza-lab/GitRepos/saliency-nn/Python/utilities/" (22319 45631 63761 83000) "test_matplotlib.py" "../" "BaseExtractor.py" "./" "Utils.py" "test_cuda.py" "ListProcessor.py" "__init__.py" "Experimenter.py" "DataGenerator.py" "ParallelExtractor.py" "relu_3lyr_net_50_adam_mse.hdf5")
